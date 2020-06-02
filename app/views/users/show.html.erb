@@ -1,0 +1,10 @@
+<h1>Users#show</h1>
+
+<p>メールアドレス : <%= @user.email %></p>
+
+<% @user.tag_list.each do |tag| %>
+  <span class="badge badge-primary mr-1 p-2"><%= tag %></span>
+<% end %>
+
+
+<%= link_to "編集する", edit_user_registration_path(current_user.id) %>
