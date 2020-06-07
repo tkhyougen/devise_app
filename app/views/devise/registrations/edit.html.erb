@@ -32,7 +32,7 @@
   </div>
 
   <!-- #taggable　#tag-itにて追加 -->
-  <div class="field",id: "user_tag_list">
+  <div class="field",id="user_tag_list">
     <%= f.label :リスト %>
     <%= f.text_field :tag_list, value: @user.tag_list.join(","), class:"form-control" %>
   </div>
@@ -47,11 +47,3 @@
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
-
-
-<!-- #tag-it -->
-<%= javascript_tag do %>
-var myProject = {
-  all_tag_list: <%= raw @all_tag_list %>
-};
-<% end %>
